@@ -14,6 +14,21 @@ const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             alert('続きの文章を入力してください。');
             return;
         }
+        async function loadStory() {
+    // 'stories'テーブルから全データを取得し、作成日時順に並べ替え
+    let { data: storyParts, error } = await supabase
+        .from('stories')
+        .select('*')
+        .order('created_at', { ascending: true });
+
+    if (error) {
+        console.error('データの取得に失敗:', error);
+        return;
+    }
+    
+    // 取得したデータをHTMLに表示する処理...
+    // storyParts.forEach(part => { /* HTMLに追加 */ });
+}
 
         // 実際には、ここでサーバーのAPIを呼び出してデータを保存する処理が入ります
         // 例: fetch('/api/story/post', { method: 'POST', body: JSON.stringify({ content: newText }) })
