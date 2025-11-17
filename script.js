@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const postButton = document.getElementById('post-button');
     const newPartInput = document.getElementById('new-part');
     const storyContainer = document.getElementById('story-container');
+const SUPABASE_URL = 'あなたのSupabase URL'; 
+const SUPABASE_ANON_KEY = 'あなたのAnon Key'; 
 
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     // 投稿ボタンがクリックされたときの処理
     postButton.addEventListener('click', () => {
         const newText = newPartInput.value.trim();
