@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ⚠️ 設定箇所: あなたのSupabaseプロジェクトの情報に置き換えてください
     // ----------------------------------------------------------------
    
-NEXT_PUBLIC_SUPABASE_URL=https://vzgqrerdqhpgfxggvcci.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6Z3FyZXJkcWhwZ2Z4Z2d2Y2NpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzNjA2MzcsImV4cCI6MjA3ODkzNjYzN30.hugne9qqI-jHAb97yX7VR0cmKroRmtcCd9S_FkLCjFU
+NEXT_PUBLIC_SUPABASE_URL="https://vzgqrerdqhpgfxggvcci.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6Z3FyZXJkcWhwZ2Z4Z2d2Y2NpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzNjA2MzcsImV4cCI6MjA3ODkzNjYzN30.hugne9qqI-jHAb97yX7VR0cmKroRmtcCd9S_FkLCjFU"
 
     
     // Supabaseクライアントの初期化
