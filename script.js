@@ -29,6 +29,25 @@ const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     // 取得したデータをHTMLに表示する処理...
     // storyParts.forEach(part => { /* HTMLに追加 */ });
 }
+        async function postNewPart(newText, userId) {
+    const { data, error } = await supabase
+        .from('stories')
+        .insert([
+            { content: newText, author_id: userId } // ログインユーザーのIDを含める
+        ]);
+
+    if (error) {
+        alert('投稿に失敗しました。ログイン状態を確認してください。');
+        console.error('投稿エラー:', error);
+        return;
+    }
+    
+    alert('新しい文章を投稿しました！');
+    // 画面を更新して最新の文章を表示
+    loadStory(); 
+}
+
+// 投稿ボタンのクリックイベントからこの関数を呼び出す
 
         // 実際には、ここでサーバーのAPIを呼び出してデータを保存する処理が入ります
         // 例: fetch('/api/story/post', { method: 'POST', body: JSON.stringify({ content: newText }) })
