@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>共同小説サイト</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
 </head>
 <body>
     <h1>共同で物語をつむぐ</h1>
+    
+    <div id="auth-status" style="margin-bottom: 20px; font-weight: bold;">認証状態を確認中...</div>
     
     <div id="story-container">
         <p class="story-part">物語の始まりです。誰かが続きを書くのを待っています。</p>
@@ -18,10 +23,9 @@
     <div id="post-section">
         <h2>物語の続きを投稿</h2>
         <textarea id="new-part" placeholder="ここに続きの文章を入力してください..." rows="6"></textarea>
-        <button id="post-button">投稿する</button>
+        <button id="post-button" disabled>投稿する</button> 
         <p class="note">
-            ※ **[重要]** 実際には、この投稿はサーバー経由でデータベースに保存されます。<br>
-            このデモでは、画面上での追加のみを行います。
+            ※ 投稿にはログインが必要です。
         </p>
     </div>
 
